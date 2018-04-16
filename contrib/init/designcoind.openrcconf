@@ -1,0 +1,26 @@
+# /etc/conf.d/designcoind: config file for /etc/init.d/designcoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/designcoin/designcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/designcoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/designcoind.pid"
+
+# Where to write designcoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/designcoind"
+
+# User and group to own designcoind process
+#BITCOIND_USER="designcoin"
+#BITCOIND_GROUP="designcoin"
+
+# Path to designcoind executable
+#BITCOIND_BIN="/usr/bin/designcoind"
+
+# Nice value to run designcoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

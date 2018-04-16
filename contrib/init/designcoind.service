@@ -1,0 +1,26 @@
+[Unit]
+Description=DesignCoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=designcoin
+Group=designcoin
+
+Type=forking
+PIDFile=/var/lib/designcoind/designcoind.pid
+
+ExecStart=/usr/bin/designcoind -daemon -pid=/var/lib/designcoind/designcoind.pid \
+          -conf=/etc/designcoin/designcoin.conf -datadir=/var/lib/designcoind
+
+ExecStop=-/usr/bin/designcoin-cli -conf=/etc/designcoin/designcoin.conf \
+         -datadir=/var/lib/designcoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

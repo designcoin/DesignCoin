@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=DesignCoin
+Comment=DesignCoin P2P Cryptocurrency
+Comment[fr]=DesignCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=DesignCoin, eşten eşe kriptografik sanal para birimi
+Exec=designcoin-qt %u
+Terminal=false
+Type=Application
+Icon=designcoin128
+MimeType=x-scheme-handler/designcoin;
+Categories=Office;Finance;
